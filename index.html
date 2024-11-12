@@ -14,16 +14,41 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      background-color: #2e8b57; /* Green background, reminiscent of a cricket field */
       color: #333;
       line-height: 1.6;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      flex-direction: column;
       padding: 0;
       margin: 0;
-      flex-direction: column;
+      position: relative;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 1.8em;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 1em;
     }
 
     .container {
@@ -34,7 +59,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       text-align: center;
-      margin: 0 10px;
+      margin: 80px 10px; /* Adjusting the margin to create space between content and edges */
     }
 
     h1 {
@@ -152,16 +177,6 @@
       text-decoration: underline;
     }
 
-    /* Footer */
-    footer {
-      margin-top: 20px;
-      text-align: center;
-      color: #777;
-      font-size: 0.9em;
-      padding: 10px;
-      width: 100%;
-    }
-
     /* Responsive Design */
     @media (min-width: 768px) {
       .container {
@@ -185,8 +200,12 @@
   </style>
 </head>
 <body>
+  <header>
+    Crictrik - Your Ultimate Cricket Companion
+  </header>
+
   <div class="container">
-    <h1>Welcome to Crictrik – Your Ultimate Cricket Companion!</h1>
+    <h1>Welcome to Crictrik!</h1>
 
     <!-- Navigation Links -->
     <nav>
@@ -224,7 +243,6 @@
     </div>
   </div>
 
-  <!-- Footer with Copyright Information -->
   <footer>
     &copy; 2024 Crictrik. All rights reserved.
   </footer>
