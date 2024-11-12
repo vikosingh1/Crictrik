@@ -92,14 +92,47 @@
 <body>
   <div class="container">
     <h1>Create Account</h1>
-    <form>
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <input type="password" placeholder="Password" required>
-      <input type="password" placeholder="Confirm Password" required>
+    <form id="createAccountForm" onsubmit="return validateForm()">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
       <button type="submit">Create Account</button>
     </form>
     <a href="login.html" class="login-link">Already have an account? Login</a>
   </div>
+
+  <script>
+    // JavaScript form validation and redirection
+    function validateForm() {
+      // Get the values of the form fields
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var confirmPassword = document.getElementById('confirmPassword').value;
+
+      // Check if all fields are filled out
+      if (name == "" || email == "" || password == "" || confirmPassword == "") {
+        alert("All fields must be filled out.");
+        return false;
+      }
+
+      // Check if the password and confirm password match
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+      }
+
+      // Optional: Add more validation like email format, password strength, etc.
+
+      // Simulate account creation success and redirect to home page
+      alert("Account Created Successfully!");
+      
+      // Redirect to home page (you can change 'home.html' to your actual home page URL)
+      window.location.href = "home.html";
+      
+      return false;  // Prevent form submission for demo purposes
+    }
+  </script>
 </body>
 </html>
