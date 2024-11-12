@@ -19,17 +19,21 @@
       line-height: 1.6;
       display: flex;
       justify-content: center;
-      padding: 20px;
+      align-items: center;
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 100%;
       width: 100%;
       background: white;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       text-align: center;
+      margin: 0 10px;
     }
 
     h1 {
@@ -43,12 +47,16 @@
       background: #007BFF;
       padding: 10px;
       border-radius: 8px;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      padding: 5px 10px;
+      flex: 1;
+      text-align: center;
     }
 
     nav a:hover {
@@ -63,6 +71,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      width: 100%;
     }
 
     /* Modal Styles */
@@ -81,7 +90,8 @@
     .modal-content {
       background: white;
       padding: 20px;
-      width: 300px;
+      width: 90%;
+      max-width: 300px;
       border-radius: 10px;
       text-align: center;
       position: relative;
@@ -103,6 +113,7 @@
     .modal-content .modal-footer {
       display: flex;
       justify-content: space-between;
+      gap: 10px;
     }
 
     .close-btn, .login-submit {
@@ -112,6 +123,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      width: 100%;
     }
 
     .option-link {
@@ -124,6 +136,32 @@
 
     .option-link:hover {
       text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        padding: 10px;
+        border-bottom: 1px solid #fff;
+      }
+
+      .login-btn {
+        padding: 15px;
+        font-size: 1em;
+      }
+
+      .modal-content {
+        width: 90%;
+        padding: 15px;
+      }
     }
   </style>
 </head>
