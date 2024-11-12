@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crictrik</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #007BFF;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+      background: #007BFF;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .list-item {
+      margin-left: 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 1.2em;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Crictrik</h1>
+
+    <!-- Navigation Links -->
+    <nav>
+      <a href="cricket_basics.html">Cricket Basics</a>
+      <a href="fitness_module.html">Fitness Module</a>
+      <a href="diet_plan.html">Diet Plan</a>
+      <a href="skill_drills.html">Skill Drills</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="section" id="intro">
+      <p>Explore our sections for more information on Cricket Basics, Fitness Module, Diet Plan, and Skill Drills. Use the navigation links above to go to each page.</p>
+    </div>
+  </div>
+</body>
+</html>
