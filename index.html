@@ -23,11 +23,12 @@
       min-height: 100vh;
       padding: 0;
       margin: 0;
+      flex-direction: column;
     }
 
     .container {
-      max-width: 100%;
-      width: 100%;
+      width: 90%;
+      max-width: 600px;
       background: white;
       padding: 20px;
       border-radius: 10px;
@@ -38,16 +39,17 @@
 
     h1 {
       color: #007BFF;
+      font-size: 1.8em;
     }
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-around;
       margin-bottom: 20px;
       background: #007BFF;
       padding: 10px;
       border-radius: 8px;
-      flex-wrap: wrap;
     }
 
     nav a {
@@ -55,12 +57,24 @@
       text-decoration: none;
       font-weight: bold;
       padding: 5px 10px;
-      flex: 1;
       text-align: center;
+      flex: 1 1 40%;
+      margin: 5px;
     }
 
     nav a:hover {
       text-decoration: underline;
+    }
+
+    /* Scrollable Intro Section */
+    .intro {
+      max-height: 200px;
+      overflow-y: auto;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-align: left;
     }
 
     .login-btn {
@@ -138,36 +152,41 @@
       text-decoration: underline;
     }
 
+    /* Footer */
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #777;
+      font-size: 0.9em;
+      padding: 10px;
+      width: 100%;
+    }
+
     /* Responsive Design */
-    @media (max-width: 600px) {
+    @media (min-width: 768px) {
       .container {
-        padding: 15px;
+        max-width: 600px;
       }
 
-      nav {
-        flex-direction: column;
+      h1 {
+        font-size: 2em;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .container {
+        max-width: 800px;
       }
 
-      nav a {
-        padding: 10px;
-        border-bottom: 1px solid #fff;
-      }
-
-      .login-btn {
-        padding: 15px;
-        font-size: 1em;
-      }
-
-      .modal-content {
-        width: 90%;
-        padding: 15px;
+      h1 {
+        font-size: 2.2em;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to Crictrik – Your Ultimate Cricket Companion! </h1>
+    <h1>Welcome to Crictrik – Your Ultimate Cricket Companion!</h1>
 
     <!-- Navigation Links -->
     <nav>
@@ -177,14 +196,12 @@
       <a href="skill_drills.html">Skill Drills</a>
     </nav>
 
-    <!-- Intro Text -->
-    <p>Crictrik is more than just a cricket resource; it's a complete hub designed to elevate your passion and skills in cricket, no matter your level. We offer in-depth guides on the essentials, from mastering cricket basics to honing advanced techniques. Whether you're looking to understand the rules, develop your fitness, create a balanced diet plan for athletes, or practice with targeted skill drills, Crictrik has it all.
-
-Discover training tips from professionals, personalized workout routines, and nutrition guides tailored for peak athletic performance. Engage with drills designed to improve your batting, bowling, and fielding, suitable for players of all ages. Our aim is to provide you with structured, reliable content to empower your journey, helping you evolve from a beginner to a pro.
-
-Dive into the world of cricket with Crictrik, where every feature is crafted to bring you closer to becoming the player you've always wanted to be. Get ready to transform your approach to the game and start your journey towards excellence today!
-
-This type of introduction will fill a screen on mobile, providing an engaging overview of what the platform offers and encouraging users to explore further. </p>
+    <!-- Intro Text with Scrolling -->
+    <div class="intro">
+      <p>Crictrik is more than just a cricket resource; it's a complete hub designed to elevate your passion and skills in cricket, no matter your level. We offer in-depth guides on the essentials, from mastering cricket basics to honing advanced techniques. Whether you're looking to understand the rules, develop your fitness, create a balanced diet plan for athletes, or practice with targeted skill drills, Crictrik has it all.</p>
+      <p>Discover training tips from professionals, personalized workout routines, and nutrition guides tailored for peak athletic performance. Engage with drills designed to improve your batting, bowling, and fielding, suitable for players of all ages. Our aim is to provide you with structured, reliable content to empower your journey, helping you evolve from a beginner to a pro.</p>
+      <p>Dive into the world of cricket with Crictrik, where every feature is crafted to bring you closer to becoming the player you've always wanted to be. Get ready to transform your approach to the game and start your journey towards excellence today!</p>
+    </div>
 
     <!-- Login Button -->
     <button class="login-btn" onclick="openModal()">Login</button>
@@ -206,6 +223,11 @@ This type of introduction will fill a screen on mobile, providing an engaging ov
       </div>
     </div>
   </div>
+
+  <!-- Footer with Copyright Information -->
+  <footer>
+    &copy; 2024 Crictrik. All rights reserved.
+  </footer>
 
   <script>
     function openModal() {
