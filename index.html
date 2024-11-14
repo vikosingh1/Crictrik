@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crictrik</title>
+  <!-- Link to Font Awesome for Social Media Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     /* Basic Reset */
     * {
@@ -14,7 +16,7 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #2e8b57; /* Green background, reminiscent of a cricket field */
+      background-color: #2e8b57;
       color: #333;
       line-height: 1.6;
       display: flex;
@@ -59,7 +61,7 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       text-align: center;
-      margin: 80px 10px; /* Adjusting the margin to create space between content and edges */
+      margin: 80px 10px;
     }
 
     h1 {
@@ -91,7 +93,6 @@
       text-decoration: underline;
     }
 
-    /* Scrollable Intro Section */
     .intro {
       max-height: 200px;
       overflow-y: auto;
@@ -113,7 +114,6 @@
       width: 100%;
     }
 
-    /* Modal Styles */
     .modal {
       display: none;
       position: fixed;
@@ -177,6 +177,30 @@
       text-decoration: underline;
     }
 
+    /* Contact Us Section */
+    .contact-us {
+      margin-top: 30px;
+    }
+
+    .contact-us h2 {
+      color: #007BFF;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: #007BFF;
+      font-size: 1.5em;
+      text-decoration: none;
+    }
+
     /* Responsive Design */
     @media (min-width: 768px) {
       .container {
@@ -207,7 +231,6 @@
   <div class="container">
     <h1>Welcome to Crictrik!</h1>
 
-    <!-- Navigation Links -->
     <nav>
       <a href="cricket_basics.html">Cricket Basics</a>
       <a href="fitness_module.html">Fitness Module</a>
@@ -215,17 +238,12 @@
       <a href="skill_drills.html">Skill Drills</a>
     </nav>
 
-    <!-- Intro Text with Scrolling -->
     <div class="intro">
       <p>Crictrik is more than just a cricket resource; it's a complete hub designed to elevate your passion and skills in cricket, no matter your level. We offer in-depth guides on the essentials, from mastering cricket basics to honing advanced techniques. Whether you're looking to understand the rules, develop your fitness, create a balanced diet plan for athletes, or practice with targeted skill drills, Crictrik has it all.</p>
-      <p>Discover training tips from professionals, personalized workout routines, and nutrition guides tailored for peak athletic performance. Engage with drills designed to improve your batting, bowling, and fielding, suitable for players of all ages. Our aim is to provide you with structured, reliable content to empower your journey, helping you evolve from a beginner to a pro.</p>
-      <p>Dive into the world of cricket with Crictrik, where every feature is crafted to bring you closer to becoming the player you've always wanted to be. Get ready to transform your approach to the game and start your journey towards excellence today!</p>
     </div>
 
-    <!-- Login Button -->
     <button class="login-btn" onclick="openModal()">Login</button>
 
-    <!-- Login Modal -->
     <div id="loginModal" class="modal">
       <div class="modal-content">
         <h2>Login</h2>
@@ -239,6 +257,18 @@
         </form>
         <a href="create_account.html" class="option-link">Create Account</a>
         <a href="forgot_password.html" class="option-link">Forgot Password?</a>
+      </div>
+    </div>
+
+    <!-- Contact Us Section with Social Media Icons -->
+    <div class="contact-us">
+      <h2>Contact Us</h2>
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:contact@crictrik.com" title="Gmail"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </div>
