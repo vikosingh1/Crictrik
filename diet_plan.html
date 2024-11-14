@@ -17,55 +17,65 @@
       padding: 20px;
     }
 
-    /* Light overlay for transparency */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.2); /* Light overlay */
-      z-index: -1;
-    }
-
     .container {
       max-width: 800px;
       width: 100%;
-      background: rgba(255, 255, 255, 0.7); /* Transparent white background */
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: transparent; /* Container no background to merge with the page */
     }
 
     h2 {
-      color: #007BFF;
+      color: #ffffff; /* Light color for headings */
+      text-align: center;
+      font-size: 2rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding text shadow */
+    }
+
+    p {
+      color: #ffffff; /* White text for better contrast */
+      font-size: 1.1rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
     }
 
     .back-link {
       display: inline-block;
       margin-bottom: 20px;
-      color: #007BFF;
+      color: #ffffff; /* White color for links */
       text-decoration: none;
       font-weight: bold;
+      background-color: #007BFF;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     .back-link:hover {
-      text-decoration: underline;
+      text-decoration: none;
+      background-color: #0056b3;
+      transform: scale(1.1);
     }
 
     .list-item {
       margin-left: 20px;
+      font-size: 1.1rem;
+      color: #ffffff; /* White text for list items */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Text shadow for readability */
     }
+
+    ul {
+      padding-left: 20px;
+    }
+
   </style>
 </head>
 <body>
   <div class="container">
     <a href="index.html" class="back-link">← Back to Home</a>
     <h2>Diet Plan</h2>
-    <p>Fuel Your Game with the Right Nutrition
-
-In the Diet Plan section, we provide dietary advice to help you stay energized, build muscle, and recover quickly after training. Discover meal plans that focus on nutrient-rich foods like lean proteins, whole grains, and vegetables, all specifically chosen to support cricket players. We outline how a balanced diet can give you the edge on the field, helping you make smarter food choices that support long-term health and peak performance. Explore diet tips that empower you to stay fit and focused, both on and off the field.</p>
+    <p>Fuel Your Game with the Right Nutrition. In the Diet Plan section, we provide dietary advice to help you stay energized, build muscle, and recover quickly after training. Discover meal plans that focus on nutrient-rich foods like lean proteins, whole grains, and vegetables, all specifically chosen to support cricket players. We outline how a balanced diet can give you the edge on the field, helping you make smarter food choices that support long-term health and peak performance. Explore diet tips that empower you to stay fit and focused, both on and off the field.</p>
     <ul>
       <li class="list-item">Cereal</li>
       <li class="list-item">Vegetables</li>
