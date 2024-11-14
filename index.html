@@ -204,9 +204,28 @@
     }
 
     .social-icons a {
-      color: blue;
       font-size: 1.5em;
       text-decoration: none;
+    }
+
+    .social-icons .facebook {
+      color: #feda75; /* Light Yellow */
+    }
+
+    .social-icons .instagram {
+      color: #fa7e1e; /* Orange */
+    }
+
+    .social-icons .whatsapp {
+      color: #d62976; /* Pink */
+    }
+
+    .social-icons .linkedin {
+      color: #962fbf; /* Purple */
+    }
+
+    .social-icons .google-play {
+      color: #4f5bd5; /* Blue */
     }
 
     /* Responsive Design */
@@ -259,39 +278,49 @@
           <input type="email" placeholder="Enter your email" required>
           <input type="password" placeholder="Enter your password" required>
           <div class="modal-footer">
-            <button type="button" class="close-btn" onclick="closeModal()">Cancel</button>
+            <button type="button" class="close-btn" onclick="closeModal()">Close</button>
             <button type="submit" class="login-submit">Login</button>
           </div>
         </form>
-        <a href="create_account.html" class="option-link">Create Account</a>
-        <a href="forgot_password.html" class="option-link">Forgot Password?</a>
+        <a href="#" class="option-link">Forgot your password?</a>
+        <a href="#" class="option-link">Create an account</a>
       </div>
     </div>
 
-    <!-- Contact Us Section with Social Media Icons -->
     <div class="contact-us">
       <h2>Contact Us</h2>
       <div class="social-icons">
-        <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://play.google.com" target="_blank" title="Google Play"><i class="fab fa-google-play"></i></a>
+        <a href="https://facebook.com" class="facebook" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com" class="instagram" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/your-number" class="whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://linkedin.com" class="linkedin" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://play.google.com/store" class="google-play" target="_blank">
+          <i class="fab fa-google-play"></i>
+        </a>
       </div>
     </div>
   </div>
 
   <footer>
-    Crictrik - All Rights Reserved
+    &copy; 2024 Crictrik - All Rights Reserved
   </footer>
 
   <script>
+    // Modal functionality
     function openModal() {
-      document.getElementById('loginModal').style.display = 'flex';
+      document.getElementById("loginModal").style.display = "flex";
     }
 
     function closeModal() {
-      document.getElementById('loginModal').style.display = 'none';
+      document.getElementById("loginModal").style.display = "none";
     }
   </script>
 </body>
