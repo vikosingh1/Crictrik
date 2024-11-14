@@ -16,7 +16,8 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #2e8b57;
+      background: url('https://raw.githubusercontent.com/vikosingh1/Crictrik/15dfa3a80bfd554e041878cee1305080d1315207/%E2%80%94Pngtree%E2%80%94icc%20cricket%20world%20match%20background_13431639.png') no-repeat center center fixed; /* Set the background image */
+      background-size: cover;
       color: #333;
       line-height: 1.6;
       display: flex;
@@ -30,42 +31,48 @@
     }
 
     header {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #007BFF;
-      color: white;
+      background: url('https://raw.githubusercontent.com/vikosingh1/Crictrik/15dfa3a80bfd554e041878cee1305080d1315207/%E2%80%94Pngtree%E2%80%94icc%20cricket%20world%20match%20background_13431639.png') no-repeat center center;
+      background-size: cover;
+      color: blue; /* Changed text color to blue */
       text-align: center;
       padding: 15px 0;
-      font-size: 1.8em;
+      font-size: 2em;
+      z-index: 10;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Added shadow for better visibility */
     }
 
     footer {
-      position: absolute;
+      position: fixed;
       bottom: 0;
       left: 0;
       width: 100%;
-      background-color: #007BFF;
-      color: white;
+      background: url('https://raw.githubusercontent.com/vikosingh1/Crictrik/15dfa3a80bfd554e041878cee1305080d1315207/%E2%80%94Pngtree%E2%80%94icc%20cricket%20world%20match%20background_13431639.png') no-repeat center center;
+      background-size: cover;
+      color: blue; /* Changed text color to blue */
       text-align: center;
       padding: 15px 0;
-      font-size: 1em;
+      font-size: 1.2em;
+      z-index: 10;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Added shadow for better visibility */
     }
 
     .container {
       width: 90%;
       max-width: 600px;
-      background: white;
+      background: rgba(255, 255, 255, 0); /* Set transparency */
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       text-align: center;
-      margin: 80px 10px;
+      margin: 100px 10px 80px; /* Added margin for fixed header and footer */
     }
 
     h1 {
-      color: #007BFF;
+      color: blue; /* Set header text color to blue */
       font-size: 1.8em;
     }
 
@@ -101,6 +108,7 @@
       border: 1px solid #ddd;
       border-radius: 5px;
       text-align: left;
+      background: rgba(255, 255, 255, 0.6); /* Added transparency */
     }
 
     .login-btn {
@@ -138,7 +146,7 @@
 
     .modal-content h2 {
       margin-bottom: 20px;
-      color: #007BFF;
+      color: blue;
     }
 
     .modal-content input {
@@ -183,7 +191,7 @@
     }
 
     .contact-us h2 {
-      color: #007BFF;
+      color: blue;
       font-size: 1.5em;
       margin-bottom: 10px;
     }
@@ -196,7 +204,7 @@
     }
 
     .social-icons a {
-      color: #007BFF;
+      color: blue;
       font-size: 1.5em;
       text-decoration: none;
     }
@@ -260,31 +268,30 @@
       </div>
     </div>
 
-    <!-- Contact Us Section with Social Media Icons -->
+    <!-- Contact Us Section -->
     <div class="contact-us">
       <h2>Contact Us</h2>
       <div class="social-icons">
         <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
         <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.whatsapp.com" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="mailto:contact@crictrik.com" title="Gmail"><i class="fas fa-envelope"></i></a>
-        <a href="https://play.google.com/store" target="_blank" title="Google Play Store"><i class="fab fa-google-play"></i></a>
+        <a href="https://wa.me/" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://play.google.com" target="_blank" title="Google Play"><i class="fab fa-google-play"></i></a>
       </div>
     </div>
   </div>
 
   <footer>
-    &copy; 2024 Crictrik. All rights reserved.
+    Crictrik - All Rights Reserved
   </footer>
 
   <script>
     function openModal() {
-      document.getElementById("loginModal").style.display = "flex";
+      document.getElementById('loginModal').style.display = 'flex';
     }
 
     function closeModal() {
-      document.getElementById("loginModal").style.display = "none";
+      document.getElementById('loginModal').style.display = 'none';
     }
   </script>
 </body>
